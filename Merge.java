@@ -52,8 +52,18 @@ public static void mergesort(int[]data, int lo, int hi){
 	int mid = (hi + lo) / 2;
 	//makes tow arrays, by splitting the current one into a right and left one
 	// mergesort(data,lo,hi);
-	if (lo >= hi || data.length < 2){
-		
+	if (data.length < 3){
+		for (int i = 1; i < data.length; i++ ){
+  		int current = data[i];
+  		int place = i;
+		while(place -1  >= 0 && current < data [place-1]){
+	  //what ever is the left most number that current is less than, shift everything between that number and the current one over to ther right.
+		data [place] = data [place - 1];
+		place --;
+	  }
+	// then enter the current into the space before the number it is less than.
+			data [place] = current;
+	  }
 		// System.out.println("smxhiuxbsbgdjs");
 		return;
 	}
