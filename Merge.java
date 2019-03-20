@@ -1,14 +1,21 @@
 public class Merge{
 		private static  int [] original;
 public static void main(String[] args) {
-	int [] a = {6, 7 , 5};
+	int [] a = {5, 4 , 6, 1, 2, 3, 4, 4, 3, 7, 8, 9};
 	mergesort (a);
+	int [] b = {1, 2 , 3, 3, 4, 4, 4, 5, 6, 7, 8, 9};
+	boolean sad = false;
+	for (int x = 0; x < a.length; x ++){
+		if (a[x] != b [x]){
+			sad = true;
+			System.out.println("hiudhndin");
+		}
+	}
+	if (!sad){
+		System.out.println("you da best");
+	}
 	// not changing a
-    String d = "";
-	 for (int x = 0; x < a.length; x ++){
-        d = d + a[x] + " , ";
-      }
-System.out.println(d);
+
 	}
 
 public static void mergesort(int[]data){
@@ -25,6 +32,12 @@ public static void mergesort(int[]data){
 	// }
 	// System.out.println(d + "after");
 	mergesort(copy, 0, data.length - 1);
+	// String d = "";
+	// for (int x = 0; x < original.length; x ++){
+	// 	d = d + original[x] + " , ";
+	// }
+	// System.out.println(d + "after");
+
 	for (int x = 0; x < original.length; x ++){
 		data [x] = original [x];
 	}
@@ -67,6 +80,9 @@ public static void mergesort(int[]data, int lo, int hi){
 	// 	d = d + data[x] + " , ";
 	// }
 	// System.out.println(d + "after");
+   for (int x = 0; x < data.length; x ++){
+		data [x] = original [x];
+	}
    }
 public static void merge(int[] left, int [] right){
 	original = new int [left.length + right.length];
@@ -95,6 +111,12 @@ public static void merge(int[] left, int [] right){
 		   	l ++;
 			i ++;
 	  	}
+		// String d = "";
+		// for (int x = 0; x < original.length; x ++){
+		// 	d = d + original[x] + " , ";
+		// }
+		// System.out.println(d + "akr");
+
 		}
 
 	}
