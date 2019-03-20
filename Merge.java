@@ -52,7 +52,7 @@ public static void mergesort(int[]data, int lo, int hi){
 	int mid = (hi + lo) / 2;
 	//makes tow arrays, by splitting the current one into a right and left one
 	// mergesort(data,lo,hi);
-	if (data.length < 3){
+	if (data.length < 50){
 		for (int i = 1; i < data.length; i++ ){
   		int current = data[i];
   		int place = i;
