@@ -1,11 +1,14 @@
+import java.util.Random;
 public class Merge{
 		private static  int [] original;
 public static void main(String[] args) {
-	int [] a = {5, 4 , 6, 1, 2, 3, 4, 4, 3, 7, 8, 9};
+
+	int [] a = {9, 8, 7, 5, 5, 4, 4, 4, 3, 2, 1, -1, -2, -3};
 	mergesort (a);
-	int [] b = {1, 2 , 3, 3, 4, 4, 4, 5, 6, 7, 8, 9};
+	int [] b = {-3, -2, -1, 1, 2 ,3, 4, 4, 4, 5, 5, 7, 8, 9};
 	boolean sad = false;
 	for (int x = 0; x < a.length; x ++){
+		System.out.println(a[x]);
 		if (a[x] != b [x]){
 			sad = true;
 			System.out.println("hiudhndin");
@@ -14,10 +17,9 @@ public static void main(String[] args) {
 	if (!sad){
 		System.out.println("you da best");
 	}
-	// not changing a
+	// // not changing a
 
 	}
-
 public static void mergesort(int[]data){
 	int [] copy = new int [data.length];
 
@@ -51,6 +53,7 @@ public static void mergesort(int[]data, int lo, int hi){
 	//makes tow arrays, by splitting the current one into a right and left one
 	// mergesort(data,lo,hi);
 	if (lo >= hi || data.length < 2){
+		
 		// System.out.println("smxhiuxbsbgdjs");
 		return;
 	}
