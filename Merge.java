@@ -1,25 +1,25 @@
 import java.util.Random;
 public class Merge{
 		private static  int [] original;
-public static void main(String[] args) {
-
-	int [] a = {9, 8, 7, 5, 5, 4, 4, 4, 3, 2, 1, -1, -2, -3};
-	mergesort (a);
-	int [] b = {-3, -2, -1, 1, 2 ,3, 4, 4, 4, 5, 5, 7, 8, 9};
-	boolean sad = false;
-	for (int x = 0; x < a.length; x ++){
-		System.out.println(a[x]);
-		if (a[x] != b [x]){
-			sad = true;
-			System.out.println("hiudhndin");
-		}
-	}
-	if (!sad){
-		System.out.println("you da best");
-	}
-	// // not changing a
-
-	}
+// public static void main(String[] args) {
+//
+// 	int [] a = {9, 8, 7, 5, 5, 4, 4, 4, 3, 2, 1, -1, -2, -3};
+// 	mergesort (a);
+// 	int [] b = {-3, -2, -1, 1, 2 ,3, 4, 4, 4, 5, 5, 7, 8, 9};
+// 	boolean sad = false;
+// 	for (int x = 0; x < a.length; x ++){
+// 		System.out.println(a[x]);
+// 		if (a[x] != b [x]){
+// 			sad = true;
+// 			System.out.println("hiudhndin");
+// 		}
+// 	}
+// 	if (!sad){
+// 		System.out.println("you da best");
+// 	}
+// 	// // not changing a
+//
+// 	}
 public static void mergesort(int[]data){
 	int [] copy = new int [data.length];
 
@@ -52,7 +52,11 @@ public static void mergesort(int[]data, int lo, int hi){
 	int mid = (hi + lo) / 2;
 	//makes tow arrays, by splitting the current one into a right and left one
 	// mergesort(data,lo,hi);
-	if (data.length < 50){
+	// between 30 and 40 for 3
+	// between 31 and 45 for 2
+	// between 31 and 45 for 1
+	// 31 is MVP
+	if (data.length < 31){
 		for (int i = 1; i < data.length; i++ ){
   		int current = data[i];
   		int place = i;
